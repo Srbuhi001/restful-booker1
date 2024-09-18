@@ -1,5 +1,14 @@
-33.
-   3.         options:
+   name: Python autotests
+   
+   on:
+     workflow_dispatch:
+       inputs:
+            deployment_target:
+                description: choose tests set
+                required: true
+                type: choice
+                default: smoke
+                options:
                - smoke
                -regression
                -all
